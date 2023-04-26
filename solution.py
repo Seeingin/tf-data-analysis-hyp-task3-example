@@ -20,3 +20,10 @@ def solution(x: np.array) -> bool: # Одна или две выборке на 
         return True
     else:
         return False
+
+    #another solution:
+    #одновыборочный критерий z-тест
+    
+    def solution(x):
+    res = ztest(x1=x, value=500, alternative='larger')
+    return res[1] < 0.02
